@@ -263,8 +263,8 @@ var addListeners = function addListeners() {
 
         var isFakeParent = _this.dropTarget && _this.dropTarget.hasClass('cdnd-new-parent');
 
-        if ((_this.dropSibling.nonempty() // remove extension-created parents on out
-        || grabbedIsOnlyChild) && isFakeParent // remove empty parents
+        if ((_this.dropSibling.nonempty() || // remove extension-created parents on out
+        grabbedIsOnlyChild) && isFakeParent // remove empty parents
         ) {
           _this.dropTarget.remove();
         }
@@ -315,6 +315,7 @@ var addListeners = function addListeners() {
         _sibling.addClass('cdnd-drop-sibling');
 
         setParent(_sibling, _parent);
+        console.log('IN MY LOCAL CODE!!!');
         _this.dropTargetBounds = getBoundsCopy(_parent, options.boundingBoxOptions);
         setParent(_this.grabbedNode, _parent);
         _this.dropTarget = _parent;
