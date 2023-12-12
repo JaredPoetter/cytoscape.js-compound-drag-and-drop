@@ -112,6 +112,7 @@ const addListeners = function () {
   });
 
   this.addListener('drag', 'node', () => {
+    console.log('IN MY LOCAL CODE!!!');
     if (!this.inGesture || !this.enabled) {
       return;
     }
@@ -184,8 +185,6 @@ const addListeners = function () {
         sibling.addClass('cdnd-drop-sibling');
 
         setParent(sibling, parent);
-
-        console.log('IN MY LOCAL CODE!!!');
 
         this.dropTargetBounds = getBoundsCopy(parent, options.boundingBoxOptions);
 
